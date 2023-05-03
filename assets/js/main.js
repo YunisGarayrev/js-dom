@@ -20,7 +20,7 @@ function createStudent(){
     const tbody = document.querySelector("tbody");
     for (let i = 0; i < array.length; i++) {
        
-    tbody.innerHTML += `<tr><td>${arr+=1}</td><td>${array[i].name}</td><td>${array[i].surname}</td><td><button>Delete</button></td></tr>`;
+     tbody.innerHTML += `<tr class="tr"><td>${arr += 1}</td><td>${array[i].name}</td><td>${array[i].surname}</td><td><button class="btn btn-sucess" onclick="deleterow()">Delete</button></td></tr>`;
     }
     nameInp.value = '';
     surnameInp.value = '';
@@ -28,7 +28,9 @@ function createStudent(){
     
     
 }
-function deleterow(){
-        const row=document.querySelector(".window");
-        row.classList.remove(".row")
+function deleterow() {
+    const row = document.getElementsByClassName("tr");
+    for (i = 0; i < row.length; i++) {
+        row -= row[i].remove()
+    }
     }
